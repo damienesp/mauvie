@@ -1,0 +1,66 @@
+.home-content {
+  margin: 5rem 5rem;
+}
+
+.home-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+  .home-type {
+    color: $primary-color;
+    display: flex;
+    p:nth-child(2) {
+      color: $secondary-color;
+      margin-left: 5rem;
+    }
+  }
+}
+
+.home-now-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  height: 50vh;
+  margin-bottom: 3.5rem;
+  position: relative;
+  width: 100%;
+  &:hover .home-now-title {
+    color: $tertiary-color;
+  }
+  .home-now-title {
+    bottom: 0;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    position: absolute;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease-out;
+  }
+}
+
+.home-now {
+  .home-now-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    p:nth-child(1) {
+      color: $primary-color;
+    }
+    p:nth-child(2) {
+      transition: color 0.3s ease-out;
+    }
+    p:nth-child(2):hover {
+      color: $tertiary-color;
+    }
+  }
+}
+
+// Media
+
+@media (max-width: 768px) {
+  .home-content {
+    margin: 5rem 2rem;
+  }
+}

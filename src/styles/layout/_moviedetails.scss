@@ -1,0 +1,95 @@
+.moviedetails-wrapper {
+  margin: 5rem 5rem;
+  & > button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease-out;
+    &:hover {
+      color: $tertiary-color;
+    }
+  }
+}
+
+.moviedetails-content {
+  display: flex;
+}
+
+.moviedetails-poster {
+  margin-right: 3rem;
+  width: 30%;
+  img {
+    border-radius: 15px;
+    width: 100%;
+  }
+}
+
+.moviedetails-poster-missing {
+  align-items: center;
+  background-color: rgba(131, 155, 176, 0.3);
+  border-radius: 15px;
+  display: flex;
+  font-size: 5rem;
+  justify-content: center;
+  height: 100%;
+  margin-right: 3rem;
+  width: 100%;
+}
+
+.moviedetails-info {
+  width: 70%;
+  h1 {
+    color: $primary-color;
+  }
+  .synopsis {
+    margin-top: 2rem;
+    p {
+      color: $primary-color;
+    }
+  }
+  .trailer {
+    margin-top: 1rem;
+  }
+}
+
+.trailer {
+  width: 8rem;
+  .trailer-button {
+    align-items: center;
+    background: transparent;
+    border: 2px $primary-color solid;
+    border-radius: 15px;
+    color: $secondary-color;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-family: $primary-font;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+    transition: all 0.3s ease-out;
+    .play-svg {
+      fill: $primary-color;
+      transition: fill 0.3s ease-out;
+    }
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+
+    &:hover .play-svg {
+      fill: $tertiary-color;
+    }
+  }
+}
+
+// Media
+
+@media (max-width: 768px) {
+  .moviedetails-wrapper {
+    margin: 5rem 2rem;
+  }
+}

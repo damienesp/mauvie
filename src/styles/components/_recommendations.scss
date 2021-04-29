@@ -1,0 +1,10 @@
+.recommendations-wrapper {
+  margin-top: 5rem;
+  & > p {
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+  .recommendations-null {
+    color: $secondary-color;
+  }
+}

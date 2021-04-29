@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.pagination-button {
+  background-color: transparent;
+  border: 2px $primary-color solid;
+  border-radius: 15px;
+  color: $secondary-color;
+  cursor: pointer;
+  font-family: $primary-font;
+  font-weight: 500;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  transition: all 0.4s cubic-bezier(0.2, 0.5, 0.3, 1);
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
+.next {
+  margin-left: auto;
+}

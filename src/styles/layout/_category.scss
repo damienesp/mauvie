@@ -1,0 +1,23 @@
+// Categories layout
+
+.category-wrapper {
+  margin: 5rem 5rem;
+}
+
+.category-content {
+  p {
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+    span {
+      text-transform: capitalize;
+    }
+  }
+}
+
+// Media
+
+@media (max-width: 768px) {
+  .category-wrapper {
+    margin: 5rem 2rem;
+  }
+}

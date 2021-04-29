@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$primary-color: #314455;
+$secondary-color: #839bb0;
+$tertiary-color: #d6232d;
+
+$primary-font: "Heebo", sans-serif;
+$logo-font: "Oswald", sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $secondary-color;
+  font-display: swap;
+  font-family: $primary-font;
+  font-weight: 500;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.wrapper {
+  display: flex;
+  .switch-pages {
+    min-height: 100vh;
+    width: 80%;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+}

@@ -1,0 +1,25 @@
+.home-search {
+  background-image: url("../../img/icon/search.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 10%;
+  border: 2px $primary-color solid;
+  border-radius: 15px;
+  color: $primary-color;
+  font-family: $primary-font;
+  font-weight: 500;
+  height: 2rem;
+  padding: 0 2.5rem;
+  width: 10rem;
+  &::placeholder {
+    color: $secondary-color;
+  }
+  &:focus {
+    color: $primary-color;
+    outline: none;
+  }
+  &:focus::placeholder {
+    color: transparent;
+    padding: 0 2rem;
+  }
+}
