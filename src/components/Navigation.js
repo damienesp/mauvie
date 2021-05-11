@@ -1,16 +1,46 @@
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const [activeClass, setActiveClass] = useState("");
+
+  const handleOnClick = () => {
+    if (mobileMenu) {
+      setActiveClass("hidden");
+    } else setActiveClass("active");
+
+    setMobileMenu(!mobileMenu);
+  };
+
+  const hideOverflow = () => {
+    const body = document.querySelector("body");
+    if (mobileMenu) {
+      body.style.overflow = "hidden";
+    } else body.style.overflow = "";
+  };
+
+  useEffect(() => {
+    hideOverflow();
+  });
+
   return (
     <div className="navigation-wrapper">
-      <div className="logo">
+      <div className={`logo ${activeClass}`}>
         <NavLink to="/home" activeClassName="active-logo">
           <h1>MAUVIE</h1>
         </NavLink>
       </div>
-      <nav>
-        <ul className="nav-links">
-          <NavLink to="/home" activeClassName="active-nav">
+      <nav className={`${activeClass}`}>
+        <ul
+          className={`nav-links ${activeClass}`}
+          onClick={mobileMenu ? handleOnClick : null}
+        >
+          <NavLink
+            to="/home"
+            activeClassName="active-nav"
+            onClick={mobileMenu ? handleOnClick : null}
+          >
             <li>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +55,11 @@ const Navigation = () => {
               Home
             </li>
           </NavLink>
-          <NavLink to="/popular" activeClassName="active-nav">
+          <NavLink
+            to="/popular"
+            activeClassName="active-nav"
+            onClick={mobileMenu ? handleOnClick : null}
+          >
             <li>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +74,11 @@ const Navigation = () => {
               Popular
             </li>
           </NavLink>
-          <NavLink to="/top-rated" activeClassName="active-nav">
+          <NavLink
+            to="/top-rated"
+            activeClassName="active-nav"
+            onClick={mobileMenu ? handleOnClick : null}
+          >
             <li>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +98,11 @@ const Navigation = () => {
               Top Rated
             </li>
           </NavLink>
-          <NavLink to="/community" activeClassName="active-nav">
+          <NavLink
+            to="/community"
+            activeClassName="active-nav"
+            onClick={mobileMenu ? handleOnClick : null}
+          >
             <li>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +117,11 @@ const Navigation = () => {
               Community
             </li>
           </NavLink>
-          <NavLink to="/upcoming" activeClassName="active-nav">
+          <NavLink
+            to="/upcoming"
+            activeClassName="active-nav"
+            onClick={mobileMenu ? handleOnClick : null}
+          >
             <li>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,6 +147,15 @@ const Navigation = () => {
           </NavLink>
         </ul>
       </nav>
+      <button
+        className={`hamburger ${mobileMenu ? "active" : ""}`}
+        onClick={handleOnClick}
+        aria-label="menu mobile"
+      >
+        <div className="hamburger-line"></div>
+        <div className="hamburger-line"></div>
+        <div className="hamburger-line"></div>
+      </button>
     </div>
   );
 };

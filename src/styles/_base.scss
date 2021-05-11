@@ -50,4 +50,8 @@ a {
   html {
     font-size: 85%;
   }
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }

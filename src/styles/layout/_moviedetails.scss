@@ -92,4 +92,28 @@
   .moviedetails-wrapper {
     margin: 5rem 2rem;
   }
+  .moviedetails-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .moviedetails-poster {
+    margin: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    img {
+      border-radius: 15px;
+      width: 100%;
+    }
+  }
+  .moviedetails-info {
+    width: 100%;
+    .synopsis {
+      margin-top: 2rem;
+      p {
+        color: $primary-color;
+      }
+    }
+    .trailer {
+    }
+  }
 }
